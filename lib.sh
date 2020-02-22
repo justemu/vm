@@ -34,12 +34,12 @@ GATEWAY=$(ip route | grep default | awk '{print $3}')
 DNS1="9.9.9.9"
 DNS2="149.112.112.112"
 # Repo
-GITHUB_REPO="https://raw.githubusercontent.com/nextcloud/vm/master"
+GITHUB_REPO="https://raw.githubusercontent.com/justemu/vm/master"
 STATIC="$GITHUB_REPO/static"
 LETS_ENC="$GITHUB_REPO/lets-encrypt"
 APP="$GITHUB_REPO/apps"
 NCREPO="https://download.nextcloud.com/server/releases"
-ISSUES="https://github.com/nextcloud/vm/issues"
+ISSUES="https://github.com/justemu/vm/issues"
 # User information
 NCPASS=nextcloud
 NCUSER=ncadmin
@@ -90,7 +90,7 @@ HTTP_CONF="nextcloud_http_domain_self_signed.conf"
 HTTPS_CONF="$SITES_AVAILABLE/$SUBDOMAIN.conf"
 HTTP2_CONF="/etc/apache2/mods-available/http2.conf"
 # PHP-FPM
-PHPVER=7.2
+PHPVER=7.3
 PHP_FPM_DIR=/etc/php/$PHPVER/fpm
 PHP_INI=$PHP_FPM_DIR/php.ini
 PHP_POOL_DIR=$PHP_FPM_DIR/pool.d
@@ -401,7 +401,7 @@ else
     if ! nslookup github.com
     then
 msg_box "Network NOT OK. You must have a working network connection to run this script
-If you think that this is a bug, please report it to https://github.com/nextcloud/vm/issues."
+If you think that this is a bug, please report it to https://github.com/justemu/vm/issues."
     exit 1
     fi
 fi
@@ -496,7 +496,7 @@ https://letsencrypt.readthedocs.org/en/latest/index.html
 Please check the guide for further information on how to enable SSL.
 
 This script is developed on GitHub, feel free to contribute:
-https://github.com/nextcloud/vm"
+https://github.com/justemu/vm"
 
 if [ -n "$2" ]
 then
