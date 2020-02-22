@@ -51,13 +51,13 @@ elif print_text_in_color "$ICyan" "Testing internet connection..." && ping githu
 then
 true
 # shellcheck source=lib.sh
-NCDB=1 && FIRST_IFACE=1 && CHECK_CURRENT_REPO=1 . <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+NCDB=1 && FIRST_IFACE=1 && CHECK_CURRENT_REPO=1 . <(curl -sL https://raw.githubusercontent.com/justemu/vm/master/lib.sh)
 unset FIRST_IFACE
 unset CHECK_CURRENT_REPO
 unset NCDB
 else
     print_text_in_color "$IRed" "You don't seem to have a working internet connection, and /var/scripts/lib.sh is missing so you can't run this script."
-    print_text_in_color "$ICyan" "Please report this to https://github.com/nextcloud/vm/issues/"
+    print_text_in_color "$ICyan" "Please report this to https://github.com/justemu/vm/issues/"
     exit 1
 fi
 
@@ -112,12 +112,12 @@ msg_box "Network NOT OK. You must have a working network connection to run this 
 Please contact us for support:
 https://shop.hanssonit.se/product/premium-support-per-30-minutes/
 
-Please also post this issue on: https://github.com/nextcloud/vm/issues"
+Please also post this issue on: https://github.com/justemu/vm/issues"
     exit 1
 fi
 
 # shellcheck source=lib.sh
-NCDB=1 && CHECK_CURRENT_REPO=1 && NC_UPDATE=1 . <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+NCDB=1 && CHECK_CURRENT_REPO=1 && NC_UPDATE=1 . <(curl -sL https://raw.githubusercontent.com/justemu/vm/master/lib.sh)
 unset NC_UPDATE
 unset CHECK_CURRENT_REPO
 unset NCDB
@@ -569,7 +569,7 @@ or buy a yearly subscription from Nextcloud:
 - FORUM: https://help.nextcloud.com/
 - SUBSCRIPTION: https://nextcloud.com/pricing/ (Please refer to @enoch85)
 
-Please report any bugs here: https://github.com/nextcloud/vm/issues
+Please report any bugs here: https://github.com/justemu/vm/issues
 
 TIPS & TRICKS:
 1. Publish your server online: https://goo.gl/iUGE2U
